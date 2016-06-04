@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wysiwyg</title>
+	<link rel = "stylesheet" type = "text/css" href = "./wysiwyg.css"></link>
+</head>
+<body>
+	<div>
+		<div id = "underline_button" class = "style">
+			Underline
+		</div>
+		<div id = "italic_button" class = "style">
+			Italic
+		</div>
+		<div id = "cross_button" class = "style">
+			cross-off
+		</div>
+	</div>
+	<form action = "http://localhost:3000/" method = "POST" id = "textform">
+		<textarea name = "editor" value = "" id = "editor" rows = "15" cols = "70" style = "font-size:1.5rem"></textarea>
+		<input type = "submit" name = "submit-button">
+	</form>
+	<script src = "./wysiwyg.js"></script>
+</body>
+</html>
