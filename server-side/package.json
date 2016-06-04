@@ -1,0 +1,23 @@
+{
+  "name": "html_wysiwyg",
+  "version": "1.0.0",
+  "description": "server-side for wysiwyg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enoch232/wysiwyg_no_HTML5.git"
+  },
+  "author": "Enoch Ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enoch232/wysiwyg_no_HTML5/issues"
+  },
+  "homepage": "https://github.com/enoch232/wysiwyg_no_HTML5#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}
