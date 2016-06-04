@@ -2,18 +2,24 @@
 var italic_button = document.getElementById("italic_button");
 var editor = document.getElementById("editor");
 italic_button.addEventListener("click",function(){
-	alert(doGetCaretPosition(editor))
+	style = "<span style = 'font-style:italic'>"
+	applyStyle(style);
 });
+underline_button.addEventListener("click",function(){
+	style = "<span style = 'text-decoration:underline'>"
+	applyStyle(style);
+});
+function applyStyle(style){
+	editor.value = editor.value.substring(0, editor.selectionStart)+ style + getTextFieldSelection(editor)+"</span>"+editor.value.substring(editor.selectionEnd, editor.value.length);
+}
 function doGetCaretPosition (oField) {
 
   // Initialize
   var iCaretPos = 0;
   // IE Support
   if (document.selection) {
-
     // Set focus on the element
     oField.focus();
-
     // To get cursor position, get empty selection range
     var oSel = document.selection.createRange();
 
@@ -30,4 +36,8 @@ function doGetCaretPosition (oField) {
 
   // Return results
   return iCaretPos;
+}
+function getTextFieldSelection(textField) {
+	console.log(textField.selectionStart);
+    return textField.value.substring(textField.selectionStart, textField.selectionEnd);
 }
